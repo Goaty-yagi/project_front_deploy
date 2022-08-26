@@ -1,0 +1,21 @@
+{
+  "name": "front_deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build frontend/index.html",
+    "start": "parcel frontend/index.html",
+    "heroku-postbuild": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "firebase": "^9.9.3",
+    "parcel-bundler": "^1.12.5"
+  }
+}
