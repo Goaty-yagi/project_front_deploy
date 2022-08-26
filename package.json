@@ -2,7 +2,6 @@
   "name": "front_deploy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "parcel build frontend/index.html",
     "start": "parcel frontend/index.html",
