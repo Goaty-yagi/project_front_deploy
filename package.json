@@ -6,7 +6,7 @@
   "scripts": {
     "build": "parcel build frontend/index.html",
     "start": "parcel frontend/index.html",
-    "heroku-postbuild": "parcel build src/index.html"
+    "heroku-postbuild": "parcel build frontend/index.html"
   },
   "keywords": [],
   "author": "",
