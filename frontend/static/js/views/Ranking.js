@@ -5,6 +5,8 @@ import {
 import { fixedUrl, getSessionItem } from "../store/index.js";
 import AbstractView from "./AbstractView.js";
 
+console.log("test",fixedUrl)
+
 export default class extends AbstractView {
   constructor() {
     super();

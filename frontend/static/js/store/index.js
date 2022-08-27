@@ -3,7 +3,7 @@ import Nav from "../views/Nav.js";
 
 let initialized = false;
 let is_auth = false;
-const fixedUrl = "https://murmuring-peak-30038.herokuapp.com/"
+const fixedUrl = "https://murmuring-peak-30038.herokuapp.com"
 
 export default async function initialization(userLogin, uid) {
   if (uid) {
