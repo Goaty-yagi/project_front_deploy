@@ -3,6 +3,7 @@ import Nav from "../views/Nav.js";
 
 let initialized = false;
 let is_auth = false;
+const fixedUrl = "https://murmuring-peak-30038.herokuapp.com/"
 
 export default async function initialization(userLogin, uid) {
   if (uid) {
@@ -18,7 +19,7 @@ export default async function initialization(userLogin, uid) {
   }
 }
 async function fetchScoreData(uid) {
-  const url = "http://localhost:5000";
+  const url = fixedUrl;
   const scorePath = `/api/score-id/:id=${uid}`;
   const scoreEndpoint = url + scorePath;
   await fetch(scoreEndpoint, {})
@@ -62,4 +63,5 @@ export {
   removeSessionItem,
   fetchScoreData,
   getIsAuth,
+  fixedUrl
 };

@@ -1,3 +1,4 @@
+import { fixedUrl } from "../../store/index.js";
 import AbstractView from "../AbstractView.js";
 import PopupNotification from "../PopupNotification.js";
 
@@ -147,7 +148,7 @@ export default class extends AbstractView {
   async createQuestion() {
     const inputValues = document.querySelectorAll(".text-input");
     const formCheck = this._checkForm(inputValues);
-    const url = "http://localhost:5000";
+    const url = fixedUrl;
     const path = "/api/quiz/js";
     const endpoint = url + path;
     if (formCheck) {
@@ -200,7 +201,7 @@ export default class extends AbstractView {
   }
 
   async deleteEvent(id) {
-    await fetch(`http://localhost:5000/api/${id}`, {
+    await fetch(`${fixedUrl}/api/${id}`, {
       method: "DELETE",
     });
   }

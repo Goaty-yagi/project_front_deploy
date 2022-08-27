@@ -2,7 +2,7 @@ import {
   createUser,
   getUserData,
 } from "../../../../firebase/authentication.js";
-import { setSessionStorage } from "../store/index.js";
+import { fixedUrl, setSessionStorage } from "../store/index.js";
 import AbstractView from "./AbstractView.js";
 import PopupNotification from "./PopupNotification.js";
 
@@ -12,7 +12,7 @@ export default class extends AbstractView {
     this.setTitle("Signup");
     this.score = document.location.search.substring(1).split("=")[1];
     this.app = document.querySelector("#app");
-    this.url = "http://localhost:5000";
+    this.url = fixedUrl;
     this.userPath = "/api/user";
     this.scorePath = "/api/score";
     this.userEndpoint = this.url + this.userPath;

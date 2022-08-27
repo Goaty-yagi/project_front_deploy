@@ -1,3 +1,4 @@
+import { fixedUrl } from "../store/index.js";
 import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
@@ -78,7 +79,7 @@ export default class extends AbstractView {
   }
 
   async fetchQuizData() {
-    const url = "http://localhost:5000";
+    const url = fixedUrl;
     const path = "/api/quiz/js";
     const endpoint = url + path;
     await fetch(endpoint)

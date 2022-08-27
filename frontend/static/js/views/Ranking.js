@@ -2,7 +2,7 @@ import {
   getUserData,
   getUserLogin,
 } from "../../../../firebase/authentication.js";
-import { getSessionItem } from "../store/index.js";
+import { fixedUrl, getSessionItem } from "../store/index.js";
 import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
@@ -101,7 +101,7 @@ export default class extends AbstractView {
   }
 
   async fetchData() {
-    const url = "http://localhost:5000";
+    const url = fixedUrl;
     const path = "/api/score";
     const params = "/type=js";
     const endpoint = url + path + params;

@@ -3,7 +3,7 @@ import {
   getUserData,
   getUserLogin,
 } from "../../../../firebase/authentication.js";
-import { getSessionItem, setSessionStorage } from "../store/index.js";
+import { fixedUrl, getSessionItem, setSessionStorage } from "../store/index.js";
 
 let allQuestion = [];
 let allTerm = [];
@@ -26,7 +26,7 @@ export default class extends AbstractView {
     this.setTitle("Quiz");
     this.app = document.querySelector("#app");
     this.quizComponentDom;
-    this.url = "http://localhost:5000";
+    this.url = fixedUrl;
     this.path = "/api/quiz/js";
     this.endpoint = this.url + this.path;
     this.progress = 0;
@@ -280,7 +280,7 @@ export default class extends AbstractView {
   }
 
   async updateScore() {
-    const url = "http://localhost:5000";
+    const url = fixedUrl;
     const scorePath = "/api/score";
     const scoreEndpoint = url + scorePath;
     const maxScore = getSessionItem("currentScore");
