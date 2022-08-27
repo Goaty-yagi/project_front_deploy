@@ -618,7 +618,7 @@ export default class extends AbstractView {
   async patchQuestion() {
     this.inputValues = document.querySelectorAll(".patch-input");
     const formCheck = this._checkForm(this.inputValues);
-    const url = "http://localhost:5000";
+    const url = fixedUrl;
     const path = "/api/quiz/js";
     const endpoint = url + path;
     if (formCheck) {

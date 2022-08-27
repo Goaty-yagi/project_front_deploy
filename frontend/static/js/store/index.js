@@ -32,7 +32,7 @@ async function fetchScoreData(uid) {
 }
 
 async function getUserData(uid) {
-  const url = "http://localhost:5000";
+  const url = fixedUrl;
   const userPath = `/api/user-id/:id=${uid}`;
   const userEndpoint = url + userPath;
   await fetch(userEndpoint, {})

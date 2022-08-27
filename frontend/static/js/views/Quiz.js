@@ -7,7 +7,7 @@ import { fixedUrl, getSessionItem, setSessionStorage } from "../store/index.js";
 
 let allQuestion = [];
 let allTerm = [];
-const frontURL = "https://localhost:1234";
+const frontURL = "https://fathomless-inlet-02114.herokuapp.com/";
 
 class SetQuiz {
   constructor(obj) {
