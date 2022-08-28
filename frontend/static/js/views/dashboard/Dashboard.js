@@ -50,6 +50,7 @@ export default class extends AbstractView {
 
   async allQuestions() {
     const instance = new AllQuestions();
+    instance.beforeInitialRender()
     this.dashboardContainer.innerHTML = await instance.renderHTML();
     instance.initialEvent();
   }

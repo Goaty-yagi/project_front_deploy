@@ -96,7 +96,11 @@ export default class extends AbstractView {
           this.firstSearch(e)
         );
       }
+      this.showAppNode()
     });
+  }
+  async beforeInitialRender() {
+    this.hideAppNode()
   }
   async fetchQuizData() {
     const url = fixedUrl;

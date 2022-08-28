@@ -17881,8 +17881,8 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 //............life-sycle-fook................
-// page render order will be followed
-// method execution order below.
+// page rendering order will be followed
+// the methods executions order below.
 // 1 beforeInitialRender()
 // 2 renderHTML()
 // 3 initialEvent()
@@ -17893,7 +17893,7 @@ var _default = /*#__PURE__*/function () {
     _classCallCheck(this, _default);
 
     this.dualRing = document.createElement("div");
-    this.dualRing.className = "lds-dual-ring";
+    this.dualRing.className = "lds-dual-ring fromab";
     this.dualRing.style.position = "absolute";
     this.body = document.querySelector("body");
     this.app = document.querySelector("#app");
@@ -18834,6 +18834,8 @@ var _default = /*#__PURE__*/function (_AbstractView) {
                       return _this2.firstSearch(e);
                     });
                   }
+
+                  _this2.showAppNode();
                 });
 
               case 5:
@@ -18851,20 +18853,44 @@ var _default = /*#__PURE__*/function (_AbstractView) {
       return initialEvent;
     }()
   }, {
-    key: "fetchQuizData",
+    key: "beforeInitialRender",
     value: function () {
-      var _fetchQuizData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
-        var _this3 = this;
-
-        var url, path, endpoint;
+      var _beforeInitialRender = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
         return _regeneratorRuntime().wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
+                this.hideAppNode();
+
+              case 1:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this);
+      }));
+
+      function beforeInitialRender() {
+        return _beforeInitialRender.apply(this, arguments);
+      }
+
+      return beforeInitialRender;
+    }()
+  }, {
+    key: "fetchQuizData",
+    value: function () {
+      var _fetchQuizData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+        var _this3 = this;
+
+        var url, path, endpoint;
+        return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
                 url = _index.fixedUrl;
                 path = "/api/quiz/js";
                 endpoint = url + path;
-                _context3.next = 5;
+                _context4.next = 5;
                 return fetch(endpoint).then(function (result) {
                   return result.json();
                 }).then(function (data) {
@@ -18875,10 +18901,10 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 
               case 5:
               case "end":
-                return _context3.stop();
+                return _context4.stop();
             }
           }
-        }, _callee3);
+        }, _callee4);
       }));
 
       function fetchQuizData() {
@@ -19375,13 +19401,13 @@ var _default = /*#__PURE__*/function (_AbstractView) {
   }, {
     key: "patchQuestion",
     value: function () {
-      var _patchQuestion = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+      var _patchQuestion = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
         var _this9 = this;
 
         var formCheck, url, path, endpoint, term, description, classNum, tags, title, color, notify;
-        return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
           while (1) {
-            switch (_context4.prev = _context4.next) {
+            switch (_context5.prev = _context5.next) {
               case 0:
                 this.inputValues = document.querySelectorAll(".patch-input");
                 formCheck = this._checkForm(this.inputValues);
@@ -19390,7 +19416,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
                 endpoint = url + path;
 
                 if (!formCheck) {
-                  _context4.next = 15;
+                  _context5.next = 15;
                   break;
                 }
 
@@ -19399,7 +19425,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
                 description = this.inputValues[1].value;
                 classNum = this.inputValues[2].value;
                 tags = this.chosenTags.join();
-                _context4.next = 13;
+                _context5.next = 13;
                 return fetch(endpoint, {
                   method: "PATCH",
                   body: JSON.stringify({
@@ -19433,7 +19459,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
                 });
 
               case 13:
-                _context4.next = 20;
+                _context5.next = 20;
                 break;
 
               case 15:
@@ -19448,10 +19474,10 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 
               case 21:
               case "end":
-                return _context4.stop();
+                return _context5.stop();
             }
           }
-        }, _callee4, this);
+        }, _callee5, this);
       }));
 
       function patchQuestion() {
@@ -19489,11 +19515,11 @@ var _default = /*#__PURE__*/function (_AbstractView) {
 
       var _loop3 = function _loop3(i) {
         deleteQuestionContainer[i].addEventListener("click", /*#__PURE__*/function () {
-          var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(e) {
+          var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(e) {
             var uuid, removeItemFromBrowser;
-            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
               while (1) {
-                switch (_context5.prev = _context5.next) {
+                switch (_context6.prev = _context6.next) {
                   case 0:
                     uuid = e.target.id;
                     _this10.apiData = _this10.apiData.filter(function (data) {
@@ -19504,17 +19530,17 @@ var _default = /*#__PURE__*/function (_AbstractView) {
                     _this10.container.removeChild(removeItemFromBrowser);
 
                     _this10.num.innerHTML = _this10.setResultNum(_this10.container.children.length);
-                    _context5.next = 7;
+                    _context6.next = 7;
                     return fetch(endpoint + uuid, {
                       method: "DELETE"
                     });
 
                   case 7:
                   case "end":
-                    return _context5.stop();
+                    return _context6.stop();
                 }
               }
-            }, _callee5);
+            }, _callee6);
           }));
 
           return function (_x) {
@@ -20009,14 +20035,15 @@ var _default = /*#__PURE__*/function (_AbstractView) {
             switch (_context3.prev = _context3.next) {
               case 0:
                 instance = new _AllQuestions.default();
-                _context3.next = 3;
+                instance.beforeInitialRender();
+                _context3.next = 4;
                 return instance.renderHTML();
 
-              case 3:
+              case 4:
                 this.dashboardContainer.innerHTML = _context3.sent;
                 instance.initialEvent();
 
-              case 5:
+              case 6:
               case "end":
                 return _context3.stop();
             }
@@ -20523,7 +20550,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
                 title = "Quiz Ranking Dojo";
                 quizType = "Java script";
                 description = "Test your knowledge and Beat your rivals!";
-                return _context.abrupt("return", "\n      <main id=\"main\">\n        <div class=\"main-container\">\n          <div class=\"home-each-section\">\n            <h1 class=\"home-title\">".concat(title, "</h1>\n            <h2 class=\"quiz-type\">").concat(quizType, "</h2>\n            <p>").concat(description, "</p>\n            <button class=\"start-button\" target-url=\"/quiz\">START</button>\n          </div>\n          <div class=\"home-each-section-fa-cog\">\n            <i class=\"fas fa-cog big-cog\"></i>\n            <div class=\"small-cogs\">\n              <i class=\"fas fa-cog small-cog\"></i>\n              <i class=\"fas fa-cog small-cog\"></i>\n            </div\n          </div>\n        </div>\n        </div>\n        <div class=\"second-hero\">\n          <div class=\"second-hero-flex\">\n            <i class=\"fas fa-pencil-alt\"></i>\n            <div class=\"second-hero-flex-right\">\n              <p class=\"study-home\"> Study To Get More Score?</p>\n              <p class=\"go-study\" target-url=\"/study\"> Go STUDY =></p>\n            </div>\n          </div>\n          <div class=\"rank-in-home\"></div>\n        </div>\n      </main>\n        "));
+                return _context.abrupt("return", "\n      <main id=\"main\">\n        <div class=\"main-container\">\n          <div class=\"home-each-section\">\n            <h1 class=\"home-title\">".concat(title, "</h1>\n            <h2 class=\"quiz-type\">").concat(quizType, "</h2>\n            <p>").concat(description, "</p>\n            <button class=\"start-button\" target-url=\"/quiz\">START</button>\n          </div>\n          <div class=\"home-each-section-fa-cog\">\n            <i class=\"fas fa-cog big-cog\"></i>\n            <div class=\"small-cogs\">\n              <i class=\"fas fa-cog small-cog\"></i>\n              <i class=\"fas fa-cog small-cog\"></i>\n            </div\n          </div>\n        </div>\n        </div>\n        <div class=\"second-hero\">\n          <div class=\"second-hero-flex\">\n            <i class=\"fas fa-pencil-alt\"></i>\n            <div class=\"second-hero-flex-right\">\n              <p class=\"study-home\"> Study To Get More Score?</p>\n              <p class=\"go-study\" target-url=\"/study\"> Go STUDY =></p>\n            </div>\n          </div>\n          <div class=\"rank-in-home\"></div>\n          </div>\n      </main>\n        "));
 
               case 4:
               case "end":
@@ -21120,9 +21147,7 @@ var _default = /*#__PURE__*/function (_AbstractView) {
           _this7.quizComponentDom.innerHTML += "<i id=\"font\" class=\"fas fa-times\"></i>"; //stop hover
 
           _this7.questionWrapper = document.querySelector(".question-wrapper");
-          _this7.questionWrapper.style.pointerEvents = "none";
-
-          _this7.stop();
+          _this7.questionWrapper.style.pointerEvents = "none"; // this.stop();
         }
       }, 1000);
     }
@@ -22380,7 +22405,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49940" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

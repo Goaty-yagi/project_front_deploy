@@ -190,7 +190,7 @@ export default class extends AbstractView {
         //stop hover
         this.questionWrapper = document.querySelector(".question-wrapper");
         this.questionWrapper.style.pointerEvents = "none";
-        this.stop();
+        // this.stop();
       }
     }, 1000);
   }

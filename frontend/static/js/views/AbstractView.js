@@ -1,7 +1,7 @@
 //............life-sycle-fook................
 
-// page render order will be followed
-// method execution order below.
+// page rendering order will be followed
+// the methods executions order below.
 
 // 1 beforeInitialRender()
 // 2 renderHTML()
@@ -14,7 +14,7 @@
 export default class {
   constructor() {
     this.dualRing = document.createElement("div");
-    this.dualRing.className = "lds-dual-ring";
+    this.dualRing.className = "lds-dual-ring fromab";
     this.dualRing.style.position = "absolute";
     this.body = document.querySelector("body");
     this.app = document.querySelector("#app");

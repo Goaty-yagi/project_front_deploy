@@ -1,9 +1,9 @@
 {
   "name": "front_deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
-    "heroku-postbuild": "npm install -g serve",
+    "heroku-postbuild": "npm install -g serve", 
     "build": "parcel build frontend/index.html",
     "start": "serve"
   },

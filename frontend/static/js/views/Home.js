@@ -42,7 +42,7 @@ export default class extends AbstractView {
             </div>
           </div>
           <div class="rank-in-home"></div>
-        </div>
+          </div>
       </main>
         `;
   }
