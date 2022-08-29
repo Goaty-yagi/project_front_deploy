@@ -13,7 +13,6 @@ So you can visualy see where you are like how many score the top user has.
 ```
 This app is deployed in heroku.
 [Quiz-Ranking-Dojo](https://quiz-ranking-dojo.herokuapp.com/)
-
 ```
 
 # **Why should I make it?**
