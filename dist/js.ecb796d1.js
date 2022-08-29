@@ -21147,7 +21147,9 @@ var _default = /*#__PURE__*/function (_AbstractView) {
           _this7.quizComponentDom.innerHTML += "<i id=\"font\" class=\"fas fa-times\"></i>"; //stop hover
 
           _this7.questionWrapper = document.querySelector(".question-wrapper");
-          _this7.questionWrapper.style.pointerEvents = "none"; // this.stop();
+          _this7.questionWrapper.style.pointerEvents = "none";
+
+          _this7.stop();
         }
       }, 1000);
     }
@@ -22405,7 +22407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49940" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51137" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

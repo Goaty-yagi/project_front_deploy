@@ -546,7 +546,7 @@ label{
 .study-form{
     display: flex;
     justify-content: center;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.7);
     border: solid rgb(6, 6, 90);
     width: 70%;
     transition: .5s;
@@ -641,7 +641,7 @@ select {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.7);
     /* background: rgb(243, 247, 226); */
     border: solid rgb(6, 6, 90);
     margin-bottom: 1rem;
@@ -658,7 +658,7 @@ select {
 }
 .title {
     font-weight: bold;
-    width: 20%;
+    margin-right: 1rem;
 }
 .value {
     width: 80%;
@@ -861,7 +861,7 @@ tag{
     margin-right: auto;
     padding-top: 1rem;
     width: 70%;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.7);
 }
 .create-select-text{
     padding-bottom: 4rem;
@@ -1103,7 +1103,6 @@ footer{
 }
 .creater-title-container {
     position: relative;
-    /* display: inline-block; */
     height: 50px;
     width: 100%;
     margin-bottom: 2rem;
@@ -1239,6 +1238,34 @@ footer{
         justify-content: center;
     }
 }
+@media(max-width: 800px){
+    .select-text {
+        display: flex;
+        flex-direction: column;
+    }
+    .text-input {
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+
+    .patch-container {
+        width: 70%;
+    }
+
+    .result-footer {
+        flex-direction: column;
+    }
+    .relust-container{
+        justify-content: flex-start;
+        height: 450px;
+    }
+    .score-text {
+        margin-top: 5rem;
+    }
+    .footer-section{
+        margin-bottom: 1rem;
+    }
+}
 
 @media(max-width: 640px){
     .home-each-section {
@@ -1249,6 +1276,12 @@ footer{
     }
     .go-study {
         font-size: 0.8rem;
+    }
+    .study-main {
+        flex-direction: column;
+    }
+    .study-font-container {
+        display: none;
     }
 }
 
@@ -1289,6 +1322,20 @@ footer{
         flex-basis: 85%;
         width: 100%;
     }
+}
+@media(max-width: 500px){
+    .value {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+    .title {
+        overflow-wrap: break-word;
+        font-size: 0.8rem;
+    }
+    tag{
+        font-size: 0.7rem;
+    }
+
 }
 @media(max-width: 485px){
     .theme-group {

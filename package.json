@@ -5,7 +5,7 @@
   "scripts": {
     "heroku-postbuild": "npm install -g serve", 
     "build": "parcel build frontend/index.html",
-    "start": "serve"
+    "start": "parcel frontend/index.html"
   },
   "keywords": [],
   "author": "",
