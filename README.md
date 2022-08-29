@@ -9,7 +9,7 @@ So you can visualy see where you are like how many score the top user has.
 
 # **Where to play this App?**
 
-This app is deployed in heroku.
+This app is deployed in heroku.<br>
 [Quiz-Ranking-Dojo](https://quiz-ranking-dojo.herokuapp.com/)
 
 
@@ -22,9 +22,9 @@ The answer is "Quick Answer Questions". I think this must be fun, and you can co
 
 # **Where I get Question data?**
 
-```The question data was provided as a js file for homework purpose from GA.  I built DB, and set all the data into the DB as Api.
-[git-hub page] (https://github.com/Goaty-yagi/project-beck-deploy)
-[question-data endpoint] (https://murmuring-peak-30038.herokuapp.com/api/quiz/js) 
+```The question data was provided as a js file for homework purpose from GA.  I built DB, and set all the data into the DB as Api.<br>
+[git-hub page](https://github.com/Goaty-yagi/project-beck-deploy)<br>
+[question-data endpoint](https://murmuring-peak-30038.herokuapp.com/api/quiz/js) 
 ```
 
 
@@ -37,12 +37,13 @@ There are two things I want you to see,
 ```
 
 ## **1,  Routing.**
-## **2,  Life Sycle Hook.**
 
 ```Regarding to SPA, routing is one of the most crutial component. 
 Because SPA is one HTML file rendered and a bunch of JS file munipulate dom element to be in the browser, 
 so  I couldn't rely on default routing.
 ```
+## **2,  Life Sycle Hook.**
+
 ```
 Life sycle Hook, this idea comes from Vue.js. 
 It would devide a component life into layers. 
