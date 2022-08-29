@@ -22,6 +22,7 @@ so I choose to build it in this way. I believe that this knowledge definitely he
 There are two things I want you to see,
 
 **1,  Routing.**
+
 **2,  Life Sycle Hook.**
 
 Regarding to SPA, routing is one of the most crutial component. 
