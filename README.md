@@ -11,7 +11,7 @@ So you can visualy see where you are like how many score the top user has.
 # **Where to play this App?**
 
 
-This app is deployed in heroku.
+This app is deployed in heroku.<br>
 [Quiz-Ranking-Dojo](https://quiz-ranking-dojo.herokuapp.com/)
 
 
@@ -26,8 +26,8 @@ The answer is "Quick Answer Questions". I think this must be fun, and you can co
 # **Where I get Question data?**
 
 
-The question data was provided as a js file for homework purpose from GA.  I built DB, and set all the data into the DB as Api.
-[git-hub page](https://github.com/Goaty-yagi/project-beck-deploy)
+The question data was provided as a js file for homework purpose from GA.  I built DB, and set all the data into the DB as Api.<br>
+[git-hub page](https://github.com/Goaty-yagi/project-beck-deploy)<br>
 [question-data endpoint](https://murmuring-peak-30038.herokuapp.com/api/quiz/js)
 
 
